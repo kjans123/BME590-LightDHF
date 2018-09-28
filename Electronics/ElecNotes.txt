@@ -1,0 +1,1 @@
+9-27-2018: decided to use analog based design for the BME590 design challenge
