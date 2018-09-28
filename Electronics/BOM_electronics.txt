@@ -1,0 +1,2 @@
+timer chip: TI LMC555IMX/NOPB 
+	URL: https://www.mouser.com/ProductDetail/Texas-Instruments/LMC555IMX-NOPB?qs=sGAEpiMZZMsFq5dYAzx%252bAGcYJAL9qirykufjm5XnICI%3d
