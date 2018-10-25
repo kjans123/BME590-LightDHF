@@ -1,2 +1,3 @@
+10/24/2018:
 bulb_grommet_holder V1 is based on 9600K115 grommet from McMaster Carr (https://www.mcmaster.com/9600k115)
-the bulb holder is found here: (https://www.amazon.com/gp/product/B06XRZ3M39/ref=oh_aui_detailpage_o00_s00?ie=UTF8&psc=1)
+the bulb holder for V1 is found here: (https://www.amazon.com/gp/product/B06XRZ3M39/ref=oh_aui_detailpage_o00_s00?ie=UTF8&psc=1)
