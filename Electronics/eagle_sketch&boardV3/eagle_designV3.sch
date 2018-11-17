@@ -6432,51 +6432,6 @@ www.betemcu.cu</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="DIPswitchLib">
-<packages>
-<package name="SDA01H1SBD_PART">
-<smd name="OFF" x="-4.11" y="0" dx="0.72" dy="2.15" layer="1"/>
-<smd name="ON" x="4.11" y="0" dx="0.72" dy="2.15" layer="1"/>
-<wire x1="-3.75" y1="0" x2="-3.75" y2="0.02" width="0.127" layer="21"/>
-<wire x1="-3.75" y1="0.02" x2="-3.75" y2="2.13" width="0.127" layer="21"/>
-<wire x1="-3.75" y1="2.13" x2="3.71" y2="2.13" width="0.127" layer="21"/>
-<wire x1="3.71" y1="2.13" x2="3.71" y2="-2.11" width="0.127" layer="21"/>
-<wire x1="3.71" y1="-2.11" x2="-3.68" y2="-2.11" width="0.127" layer="21"/>
-<wire x1="-3.67" y1="-2.1" x2="-3.75" y2="-2.1" width="0.127" layer="21"/>
-<wire x1="-3.75" y1="-2.1" x2="-3.75" y2="0" width="0.127" layer="21"/>
-<text x="-4.3" y="2.58" size="1.27" layer="21">SDA01H1SBD</text>
-</package>
-</packages>
-<symbols>
-<symbol name="SDA01H1SBD_SYM">
-<description>Simple SMD switch</description>
-<wire x1="-10.16" y1="-2.54" x2="-10.16" y2="2.54" width="0.254" layer="94"/>
-<wire x1="-10.16" y1="2.54" x2="10.16" y2="2.54" width="0.254" layer="94"/>
-<wire x1="10.16" y1="2.54" x2="10.16" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="10.16" y1="-2.54" x2="-10.16" y2="-2.54" width="0.254" layer="94"/>
-<pin name="OFF_1" x="-12.7" y="0" length="middle" direction="in"/>
-<pin name="ON_1" x="12.7" y="0" length="middle" direction="out" rot="R180"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="SDA01H1SBD_DEVICE">
-<gates>
-<gate name="G$1" symbol="SDA01H1SBD_SYM" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="SDA01H1SBD_PART">
-<connects>
-<connect gate="G$1" pin="OFF_1" pad="OFF"/>
-<connect gate="G$1" pin="ON_1" pad="ON"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="SparkFun-Connectors" urn="urn:adsk.eagle:library:513">
 <description>&lt;h3&gt;SparkFun Connectors&lt;/h3&gt;
 This library contains electrically-functional connectors. 
@@ -7772,9 +7727,9 @@ part number 2062-2P from STA</description>
 <part name="GND3" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 <part name="GND6" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 <part name="U$1" library="Arduino-clone" deviceset="PRO-MINI" device=""/>
-<part name="U$2" library="DIPswitchLib" deviceset="SDA01H1SBD_DEVICE" device=""/>
 <part name="BATTERY_IN" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_02" device="" package3d_urn="urn:adsk.eagle:package:38039/1"/>
 <part name="LED_OUT" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_02" device="" package3d_urn="urn:adsk.eagle:package:38039/1"/>
+<part name="SWITCH_HEADER" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_02" device="" package3d_urn="urn:adsk.eagle:package:38039/1"/>
 </parts>
 <sheets>
 <sheet>
@@ -7827,7 +7782,6 @@ part number 2062-2P from STA</description>
 <attribute name="VALUE" x="99.06" y="53.086" size="1.778" layer="96" align="top-center"/>
 </instance>
 <instance part="U$1" gate="G$1" x="144.78" y="53.34" smashed="yes"/>
-<instance part="U$2" gate="G$1" x="20.32" y="58.42" smashed="yes"/>
 <instance part="BATTERY_IN" gate="G$1" x="12.7" y="45.72" smashed="yes" rot="R180">
 <attribute name="VALUE" x="15.24" y="50.546" size="1.778" layer="96" font="vector" rot="R180"/>
 <attribute name="NAME" x="15.24" y="40.132" size="1.778" layer="95" font="vector" rot="R180"/>
@@ -7836,6 +7790,10 @@ part number 2062-2P from STA</description>
 <attribute name="VALUE" x="208.28" y="75.946" size="1.778" layer="96" font="vector" rot="R180"/>
 <attribute name="NAME" x="208.28" y="65.532" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
+<instance part="SWITCH_HEADER" gate="G$1" x="22.86" y="60.96" smashed="yes" rot="R180">
+<attribute name="VALUE" x="25.4" y="65.786" size="1.778" layer="96" font="vector" rot="R180"/>
+<attribute name="NAME" x="25.4" y="55.372" size="1.778" layer="95" font="vector" rot="R180"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -7843,8 +7801,12 @@ part number 2062-2P from STA</description>
 <net name="N$2" class="0">
 <segment>
 <pinref part="R4" gate="G$1" pin="1"/>
-<wire x1="33.02" y1="58.42" x2="33.02" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="ON_1"/>
+<pinref part="SWITCH_HEADER" gate="G$1" pin="1"/>
+<wire x1="15.24" y1="60.96" x2="15.24" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="15.24" y1="66.04" x2="30.48" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="30.48" y1="66.04" x2="30.48" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="30.48" y1="55.88" x2="33.02" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="55.88" x2="33.02" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -7943,8 +7905,8 @@ part number 2062-2P from STA</description>
 <segment>
 <pinref part="BATTERY_IN" gate="G$1" pin="1"/>
 <wire x1="5.08" y1="45.72" x2="5.08" y2="58.42" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="OFF_1"/>
-<wire x1="5.08" y1="58.42" x2="7.62" y2="58.42" width="0.1524" layer="91"/>
+<pinref part="SWITCH_HEADER" gate="G$1" pin="2"/>
+<wire x1="5.08" y1="58.42" x2="15.24" y2="58.42" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$7" class="0">
