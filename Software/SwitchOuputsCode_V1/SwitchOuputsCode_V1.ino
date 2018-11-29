@@ -1,5 +1,5 @@
 #define inPin 2
-#define outPin 5
+#define outPin 6
 #define FLASH_RATE_Hz 2
 #define PWM_MAX 255
 
@@ -102,7 +102,7 @@ void cycle_light(){
     case 4:
       flash_the_light();
       break;
-  case 5:
+    case 5:
       operating_state = 0;
       LED_ON = false;
       flash_count=0;
