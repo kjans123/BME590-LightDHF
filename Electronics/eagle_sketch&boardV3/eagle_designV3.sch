@@ -7709,11 +7709,7 @@ part number 2062-2P from STA</description>
 <parts>
 <part name="R1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:6240566/1" value="50k"/>
 <part name="S2" library="SKRPABE010" deviceset="SKRPABE010" device=""/>
-<part name="R2" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:6240566/1" value="1.5k"/>
-<part name="GND1" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
-<part name="R4" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:6240566/1" value="20k">
-<attribute name="OHMS" value="20k"/>
-</part>
+<part name="R2" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:6240566/1" value="330"/>
 <part name="GND4" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 <part name="C3" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="C-US" device="C0805" package3d_urn="urn:adsk.eagle:package:6240337/1" value="0.1uF">
 <attribute name="CAP" value="0.1uF"/>
@@ -7730,6 +7726,7 @@ part number 2062-2P from STA</description>
 <part name="BATTERY_IN" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_02" device="" package3d_urn="urn:adsk.eagle:package:38039/1"/>
 <part name="LED_OUT" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_02" device="" package3d_urn="urn:adsk.eagle:package:38039/1"/>
 <part name="SWITCH_HEADER" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_02" device="" package3d_urn="urn:adsk.eagle:package:38039/1"/>
+<part name="GND1" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -7746,13 +7743,6 @@ part number 2062-2P from STA</description>
 </instance>
 <instance part="R2" gate="G$1" x="193.04" y="71.12" smashed="yes">
 <attribute name="NAME" x="193.04" y="72.644" size="1.778" layer="95" font="vector" align="bottom-center"/>
-</instance>
-<instance part="GND1" gate="1" x="2.54" y="43.18" smashed="yes" rot="R270">
-<attribute name="VALUE" x="-0.254" y="43.18" size="1.778" layer="96" rot="R270" align="top-center"/>
-</instance>
-<instance part="R4" gate="G$1" x="38.1" y="60.96" smashed="yes">
-<attribute name="NAME" x="38.1" y="62.484" size="1.778" layer="95" font="vector" align="bottom-center"/>
-<attribute name="OHMS" x="38.1" y="60.96" size="1.778" layer="96" display="both"/>
 </instance>
 <instance part="GND4" gate="1" x="68.58" y="12.7" smashed="yes">
 <attribute name="VALUE" x="68.58" y="12.446" size="1.778" layer="96" align="top-center"/>
@@ -7775,8 +7765,8 @@ part number 2062-2P from STA</description>
 <attribute name="NAME" x="48.26" y="69.215" size="1.778" layer="95"/>
 <attribute name="VALUE" x="48.26" y="66.675" size="1.778" layer="96"/>
 </instance>
-<instance part="GND3" gate="1" x="55.88" y="45.72" smashed="yes">
-<attribute name="VALUE" x="55.88" y="45.466" size="1.778" layer="96" align="top-center"/>
+<instance part="GND3" gate="1" x="55.88" y="53.34" smashed="yes">
+<attribute name="VALUE" x="55.88" y="53.086" size="1.778" layer="96" align="top-center"/>
 </instance>
 <instance part="GND6" gate="1" x="99.06" y="53.34" smashed="yes">
 <attribute name="VALUE" x="99.06" y="53.086" size="1.778" layer="96" align="top-center"/>
@@ -7794,35 +7784,26 @@ part number 2062-2P from STA</description>
 <attribute name="VALUE" x="25.4" y="65.786" size="1.778" layer="96" font="vector" rot="R180"/>
 <attribute name="NAME" x="25.4" y="55.372" size="1.778" layer="95" font="vector" rot="R180"/>
 </instance>
+<instance part="GND1" gate="1" x="2.54" y="43.18" smashed="yes" rot="R270">
+<attribute name="VALUE" x="2.286" y="43.18" size="1.778" layer="96" rot="R270" align="top-center"/>
+</instance>
 </instances>
 <busses>
 </busses>
 <nets>
 <net name="N$2" class="0">
 <segment>
-<pinref part="R4" gate="G$1" pin="1"/>
 <pinref part="SWITCH_HEADER" gate="G$1" pin="1"/>
 <wire x1="15.24" y1="60.96" x2="15.24" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="15.24" y1="66.04" x2="30.48" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="30.48" y1="66.04" x2="30.48" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="30.48" y1="55.88" x2="33.02" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="33.02" y1="55.88" x2="33.02" y2="60.96" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$3" class="0">
-<segment>
+<wire x1="15.24" y1="66.04" x2="40.64" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="66.04" x2="40.64" y2="60.96" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="A1" pin="VI"/>
-<pinref part="R4" gate="G$1" pin="2"/>
 <wire x1="45.72" y1="63.5" x2="43.18" y2="63.5" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="63.5" x2="43.18" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="60.96" x2="43.18" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GND" class="0">
-<segment>
-<pinref part="IC1" gate="A1" pin="GND"/>
-<pinref part="GND3" gate="1" pin="GND"/>
-<wire x1="55.88" y1="55.88" x2="55.88" y2="48.26" width="0.1524" layer="91"/>
-</segment>
 <segment>
 <pinref part="R1" gate="G$1" pin="1"/>
 <pinref part="GND4" gate="1" pin="GND"/>
@@ -7842,14 +7823,18 @@ part number 2062-2P from STA</description>
 <wire x1="162.56" y1="71.12" x2="170.18" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="BATTERY_IN" gate="G$1" pin="2"/>
-<pinref part="GND1" gate="1" pin="GND"/>
-</segment>
-<segment>
 <pinref part="LED_OUT" gate="G$1" pin="2"/>
 <wire x1="198.12" y1="68.58" x2="195.58" y2="68.58" width="0.1524" layer="91"/>
 <wire x1="195.58" y1="68.58" x2="195.58" y2="53.34" width="0.1524" layer="91"/>
 <pinref part="GND8" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="GND1" gate="1" pin="GND"/>
+<pinref part="BATTERY_IN" gate="G$1" pin="2"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="A1" pin="GND"/>
+<pinref part="GND3" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -7891,16 +7876,6 @@ part number 2062-2P from STA</description>
 <wire x1="119.38" y1="63.5" x2="121.92" y2="63.5" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$8" class="0">
-<segment>
-<wire x1="187.96" y1="58.42" x2="187.96" y2="71.12" width="0.1524" layer="91"/>
-<pinref part="R2" gate="G$1" pin="1"/>
-<wire x1="187.96" y1="58.42" x2="165.1" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="165.1" y1="58.42" x2="165.1" y2="63.5" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="A3"/>
-<wire x1="165.1" y1="63.5" x2="162.56" y2="63.5" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$1" class="0">
 <segment>
 <pinref part="BATTERY_IN" gate="G$1" pin="1"/>
@@ -7913,6 +7888,17 @@ part number 2062-2P from STA</description>
 <segment>
 <pinref part="R2" gate="G$1" pin="2"/>
 <pinref part="LED_OUT" gate="G$1" pin="1"/>
+</segment>
+</net>
+<net name="N$6" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="D6"/>
+<junction x="121.92" y="53.34"/>
+<wire x1="121.92" y1="53.34" x2="116.84" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="53.34" x2="116.84" y2="30.48" width="0.1524" layer="91"/>
+<pinref part="R2" gate="G$1" pin="1"/>
+<wire x1="116.84" y1="30.48" x2="187.96" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="30.48" x2="187.96" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
